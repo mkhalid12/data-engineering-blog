@@ -1,0 +1,15 @@
+version: '3.9'
+services:
+    jupyter:
+        build: .
+        environment:
+            - JUPYTER_ENABLE_LAB=yes
+            - OPENAI_API_KEY=sk-xxxx
+            - GOOGLE_API_KEY=xxxxxx
+            - GOOGLE_CSE_ID=xxxxxx
+        ports:
+          - "9999:8888"
+        volumes:
+          - ./notebook:/home/jovyan/
+        command: >
+          start.sh jupyter lab --LabApp.token=''

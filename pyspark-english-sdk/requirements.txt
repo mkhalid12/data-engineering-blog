@@ -1,0 +1,2 @@
+pyspark-ai[ingestion]==0.1.19
+google-api-python-client==2.111.0
